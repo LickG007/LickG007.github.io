@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vívlio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Adiciona a animação de escrita ao elemento h2 */
+        #animacao-titulo {
+            text-align: center;
+            overflow: hidden;
+            border-right: .15em solid orange;
+            font-size: 2em;
+            animation: animacao-tex 3s steps(30, end);
+        }
+        
+        /* Define a animação de escrita */
+        @keyframes animacao-tex {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        #animacao-p {
+            text-align: center;
+            overflow: hidden;
+            border-right: .15em solid orange;
+            font-size: 2em;
+            animation: animacao-p 3s steps(30, end);
+        }
+        
+        /* Define a animação de escrita */
+        @keyframes animacao-p {
+            from { width: 0 }
+            to { width: 100% }
+        }
+    </style>
+</head>
+<body>
+    <h2><span id="animacao-titulo">Guilherme de Paula</span></h2>
+    <p id="animacao-p">Olá, sou responsável pelo Design do projeto de TCC Vívlio, da turma 3ºDS/Noite. Tamo junto!</p>
+    
+    <script>
+        /* Adiciona a animação de escrita ao elemento h2 */
+        var elemento = document.getElementById("animacao-titulo");
+        var texto = elemento.innerHTML;
+        elemento.innerHTML = "";
+        
+        for (var i = 0; i < texto.length; i++) {
+            (function(i) {
+                setTimeout(function() {
+                    elemento.innerHTML += texto.charAt(i);
+                }, 50 * i);
+            })(i);
+        }
+    </script>
+</body>
+</html>
