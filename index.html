@@ -4,55 +4,90 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vívlio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
     <style>
-        /* Adiciona a animação de escrita ao elemento h2 */
-        #animacao-titulo {
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgba(147, 20, 20, 0.285);
+        }
+        h1{
             text-align: center;
-            overflow: hidden;
-            border-right: .15em solid orange;
-            font-size: 2em;
-            animation: animacao-tex 3s steps(30, end);
         }
         
-        /* Define a animação de escrita */
-        @keyframes animacao-tex {
-            from { width: 0 }
-            to { width: 100% }
-        }
-        #animacao-p {
+        table{
+            margin: auto;
+            width: 500px;
+            border-collapse: collapse;
+            position: relative;
             text-align: center;
-            overflow: hidden;
-            border-right: .15em solid orange;
-            font-size: 2em;
-            animation: animacao-p 3s steps(30, end);
+        }
+        h2{
+            font-size: 15pt;
+            font-weight: bold;
+            padding: 7px;
+            text-align: center;
+        }
+        .left{
+            text-align: left;
         }
         
-        /* Define a animação de escrita */
-        @keyframes animacao-p {
-            from { width: 0 }
-            to { width: 100% }
+        thead th{
+            position: sticky;
+            top: -1px;
+            background-color: rgb(255, 251, 0);
         }
+        td{
+            background-color: white;
+        }
+        td, th{
+            border: 1px solid black;
+            padding: 4px;
+        }
+
+        .PWIII{
+            background-image: url(img/PW.png);
+            background-size: cover;
+            background-position: center;
+        }
+        .BDIII{
+            background-image: url(img/BD.png);
+            background-size: cover;
+            background-position: center;
+        }
+        .IP{
+            background-image: url(img/IP.png);
+            background-size: cover;
+            background-position: center;
+        }
+        
     </style>
 </head>
 <body>
-    <h2><span id="animacao-titulo">Guilherme de Paula</span></h2>
-    <p id="animacao-p">Olá, sou responsável pelo Design do projeto de TCC Vívlio, da turma 3ºDS/Noite. Tamo junto!</p>
-    
-    <script>
-        /* Adiciona a animação de escrita ao elemento h2 */
-        var elemento = document.getElementById("animacao-titulo");
-        var texto = elemento.innerHTML;
-        elemento.innerHTML = "";
-        
-        for (var i = 0; i < texto.length; i++) {
-            (function(i) {
-                setTimeout(function() {
-                    elemento.innerHTML += texto.charAt(i);
-                }, 50 * i);
-            })(i);
-        }
-    </script>
-</body>
+    <h1>Avaliação de PW III</h1>
+    <h2>Aluno: Guilherme de Paula</h2>
+    <table>
+        <thead>
+            <th scope="col">Disciplina</th>
+            <th scope="col">Assuntos que aprendi</th>
+            <th scope="col">Nota</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="PWIII">PWIII</td>
+                <td class="left">Teve muita coisa, mas aprendi muito sobre javascript e as funcionalidades nas quais trabalhamos são interessantes, também foi trabalhado a questão de compartilhar a informação para outra tela, muito legal.</td>
+                <td>MB</td>
+            </tr>
+            <tr>
+                <td class="IP">IP</td>
+                <td class="left">Me foi ensinado a adicionar, editar, remover e visualizar informações de um banco de dados, então essa parte se divide com BDIII, além disso aprendi mais sobre as conexões vituais, como é transmitida e compartilhada as informações através da rede. Conceitos de LAN, WAN e mais.</td>
+                <td>MB</td>
+            </tr>
+            <tr>
+                <td class="BDIII">BDIII</td>
+                <td class="left">Defintivamente uma matéria que pouco me interessa, mas ao estudá-la aprendi a conectar um banco de dados em meu projeto, como visualizar tais informações assim como parte das aulas de IP que acabaram por complementar algumas coisas. </td>
+                <td>MB</td>
+            </tr>
+        </tbody> 
+    </table>
+</body>    
 </html>
